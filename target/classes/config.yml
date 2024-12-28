@@ -1,0 +1,52 @@
+cooldown: 60
+badword-list:
+  - "kontol"
+  - "memek"
+  - "anjing"
+messages:
+  reload: " &b&lMinegens &8» &fSuccessfully reloaded the plugins!"
+  badword-messages: " &b&lMinegens &8» &fDon't use curse word inside this command!"
+  cooldown-message: " &b&lMinegens &8» &fYou must wait &c{timeleft}&f till you can use this command again!"
+  failed-unmute: " &b&lMinegens &8» &fThis player isn't muted!"
+  failed-mute: " &b&lMinegens &8» &fThis player has already been muted!"
+  muted-message: " &b&lMinegens &8» &fYou are muted! You cannot use any of these commands."
+  wts:
+    - ""
+    - " &b&lMinegens"
+    - "  &8⤷&bWTS &8» &b{player} &7is selling &b&l{item} &7for &b&l${priceitem} &7/msg {player} if interested"
+    - ""
+  wtb:
+    - ""
+    - " &b&lMinegens"
+    - "  &8⤷&bWTB &8» &b{player} &7currently looking for &b&l{item} &7/msg {player} if any"
+    - ""
+  ads:
+    - ""
+    - " &b&lMinegens"
+    - "  &8⤷&bAds &8» &b{player} &7currently advertising &b&l{description} &7come and visit at &b&l/is visit &7or &b&l/pwarp {player}"
+    - ""
+  work:
+    - ""
+    - " &b&lMinegens"
+    - "  &8⤷&bWork &8» &b{player} &7currently looking &b&l{people} &7people doing task &b&l{work} &7while paying &a${pay} &7/msg %player%"
+    - ""
+  mute:
+    - " "
+    - " &b&lMinegens"
+    - "  &8⤷&cMuted &8» &b{target} &7You have been muted for abusing the command by {player}"
+    - " "
+  mute-sender:
+    - " "
+    - " &b&lMinegens"
+    - "  &8⤷&cMuted &8» &7You have muted {target}"
+    - " "
+  unmute:
+    - " "
+    - " &b&lMinegens"
+    - "  &8⤷&cMuted &8» &b{target} &7You have been unmuted by {player}"
+    - " "
+  unmute-sender:
+    - " "
+    - " &b&lMinegens"
+    - "  &8⤷&cMuted &8» &7You have unmuted {target}"
+    - " "
