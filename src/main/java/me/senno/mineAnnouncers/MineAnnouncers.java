@@ -38,6 +38,7 @@ public final class MineAnnouncers extends JavaPlugin {
     @Override
     public void onDisable() {
         // Plugin shutdown logic
+        Logger.info("[MineAnnouncers] Successfully disabled the plugins! bye bye~~");
         MDLib.shutdown();
     }
     private void registerCommand() {
