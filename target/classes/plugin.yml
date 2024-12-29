@@ -1,6 +1,0 @@
-name: MineAnnouncers
-version: '1.0.0'
-author: Senn0_
-description: Plugin that can want to sell or buy or ads or even work!
-main: me.senno.mineAnnouncers.MineAnnouncers
-api-version: '1.20'
