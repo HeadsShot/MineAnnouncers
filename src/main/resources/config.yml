@@ -1,10 +1,12 @@
 cooldown: 60
+message-length: 30
 badword-list:
   - "kontol"
   - "memek"
   - "anjing"
 messages:
   reload: " &b&lMinegens &8» &fSuccessfully reloaded the plugins!"
+  maxlength-message: " &b&lMinegens &8» &fYour message are too long! Please keep it short to {maxcharacter} words!"
   badword-messages: " &b&lMinegens &8» &fDon't use curse word inside this command!"
   cooldown-message: " &b&lMinegens &8» &fYou must wait &c{timeleft}&f till you can use this command again!"
   failed-unmute: " &b&lMinegens &8» &fThis player isn't muted!"

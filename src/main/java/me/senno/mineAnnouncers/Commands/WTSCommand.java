@@ -12,12 +12,23 @@ import org.bukkit.entity.Player;
 import java.util.*;
 
 public class WTSCommand {
-    FileConfiguration config = MineAnnouncers.DEFAULT_CONFIG.getConfig();
+
+    // all List, Hashmap, Hashset
     private List<String> badWords;
-    private  final HashMap<UUID, Long> cooldown;
-    private final CommandAPICommand command;
+    private final HashMap<UUID, Long> cooldown;
     private final HashSet<UUID> Muted;
+
+    // Constructor
+    private final CommandAPICommand command;
+
+    // Config Caller
+    FileConfiguration config = MineAnnouncers.DEFAULT_CONFIG.getConfig();
+
+    // Cooldown or anything
     private final int cooldownTime = config.getInt("cooldown");
+    private final int maxLength = config.getInt("message-length");
+
+
     public WTSCommand() {
         this.Muted = new HashSet<>();
         this.cooldown = new HashMap<>();
@@ -55,6 +66,12 @@ public class WTSCommand {
 
                     String item = (String) args.get("item");
                     int priceItem = (int) args.get("price");
+
+                    if (item.length() > maxLength) {
+                        MineAnnouncers.DEFAULT_CONFIG.sendMessage(sender, "messages.maxlength-message", new Placeholder()
+                                .add("{maxcharacter}", maxLength));
+                        return;
+                    }
 
                     if (containsBadWord(item)) {
                         MineAnnouncers.DEFAULT_CONFIG.sendMessage(sender, "messages.badword-messages");
@@ -102,6 +119,12 @@ public class WTSCommand {
 
                     String item = (String) args.get("item");
 
+                    if (item.length() > maxLength) {
+                        MineAnnouncers.DEFAULT_CONFIG.sendMessage(sender, "messages.maxlength-message", new Placeholder()
+                                .add("{maxcharacter}", maxLength));
+                        return;
+                    }
+
                     if (containsBadWord(item)) {
                         MineAnnouncers.DEFAULT_CONFIG.sendMessage(sender, "messages.badword-messages");
                         return;
@@ -147,6 +170,12 @@ public class WTSCommand {
                     }
 
                     String description = (String) args.get("description");
+
+                    if (description.length() > maxLength) {
+                        MineAnnouncers.DEFAULT_CONFIG.sendMessage(sender, "messages.maxlength-message", new Placeholder()
+                                .add("{maxcharacter}", maxLength));
+                        return;
+                    }
 
                     if (containsBadWord(description)) {
                         MineAnnouncers.DEFAULT_CONFIG.sendMessage(sender, "messages.badword-messages");
@@ -196,6 +225,12 @@ public class WTSCommand {
                     int people = (int) args.get("number people");
                     int pay = (int) args.get("pay");
                     String work = (String) args.get("work");
+
+                    if (work.length() > maxLength) {
+                        MineAnnouncers.DEFAULT_CONFIG.sendMessage(sender, "messages.maxlength-message", new Placeholder()
+                                .add("{maxcharacter}", maxLength));
+                        return;
+                    }
 
                     if (containsBadWord(work)) {
                         MineAnnouncers.DEFAULT_CONFIG.sendMessage(sender, "messages.badword-messages");
